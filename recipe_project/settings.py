@@ -77,10 +77,21 @@ WSGI_APPLICATION = 'recipe_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+#Troubleshooting adding new sql server with heroku.
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'daesqnnbj1dikf',
+        'USER': 'u4fthdo0m99mgd',
+        'PASSWORD': 'p99fac9963c0a4a1143d3cec59c3aebdc9e1993226c03b0075a6e4283c56d4d08',
+        'HOST': 'cb4l59cdg4fg1k.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -139,5 +150,6 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-import django_heroku
-django_heroku.settings(locals())
+#Troubleshooting adding new sql server with heroku.
+# import django_heroku
+# django_heroku.settings(locals())

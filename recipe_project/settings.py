@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpe
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', 'https://recipe-final-e0c0f5294f4f.herokuapp.com/']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', 'https://recipe-final-e0c0f5294f4f.herokuapp.com/', '*']
 
 
 # Application definition

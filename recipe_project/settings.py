@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'recipe_project.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-#Troubleshooting adding new sql server with heroku.
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -149,7 +149,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
-#Troubleshooting adding new sql server with heroku.
-# import django_heroku
-# django_heroku.settings(locals())
